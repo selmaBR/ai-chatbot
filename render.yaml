@@ -2,6 +2,10 @@ services:
   - type: web
     name: ai-chatbot
     env: python
-    buildCommand: ""
-    startCommand: "python app.py"
-    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python app.py
+    envVars:
+      - key: VERIFY_TOKEN
+        value: selma
+      - key: ACCESS_TOKEN
+        value: EAAUQxoYZBH6kBPOgOt11CZBw0M1BCdxjwLqsXgj3oKpb9j3AoWx2ZBJUwEi2dTHZCZAxq1C6N5i2VYNRPp77lZC5ZBwTrEeBFk7EUWLoQoD0oRPVxNGyYdDjCZAidwVa3zF3R6sHztusjZCHunREhAaZAMjbPPdiq1RcP4qbCwckFupMLFxQmerKBSJ1T39JkhpLzI5yjJggZDZD
