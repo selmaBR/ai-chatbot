@@ -4,7 +4,7 @@ from flask import Flask, request
 
 app = Flask(__name__)
 
-VERIFY_TOKEN = os.environ.get("VERIFY_TOKEN")
+VERIFY_TOKEN = "selma"  # or whatever you typed in Facebook webhook setup
 ACCESS_TOKEN = os.environ.get("ACCESS_TOKEN")
 
 def send_message(recipient_id, message_text):
