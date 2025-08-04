@@ -2,5 +2,12 @@ services:
   - type: web
     name: pp
     env: python
+    plan: free
+    region: oregon  # Or choose your region
     buildCommand: pip install -r requirements.txt
     startCommand: python app.py
+    envVars:
+      - key: VERIFY_TOKEN
+        value: selma
+      - key: ACCESS_TOKEN
+        value: EAAUQxoYZBH6kBPPer4tgxHFuMsfCnWRd0H5znZAnvmEnbdZCiPccpJsWMnZC0NWQZA9dxKcg1lBdZBuZAu9eMXKZBaJX9yFDXBeny1LKwKT1kNLgGvmQGVoQFfFeOSHgVktpbrfdrZCMUjvlYWRlwAWpDjecH5bOFZA7ZB7gWsXlkWMeo7DAd5sg4zn53otaPTDhayCjPZCluQZDZD
